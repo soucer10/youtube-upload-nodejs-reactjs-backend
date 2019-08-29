@@ -11,12 +11,7 @@ const app = express();
 /**
  * Database setup
  */
-mongoose.connect(
-  process.env.MONGO_URL,
-  {
-    useNewUrlParser: true
-  }
-);
+mongoose.connect("mongodb://localhost:27017/uploads",{useNewUrlParser: true});
 
 app.use(cors());
 app.use(express.json());
